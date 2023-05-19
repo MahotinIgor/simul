@@ -5,4 +5,9 @@ public class Rock extends Entity{
     public Rock(String picture) {
         super(picture);
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

@@ -1,8 +1,6 @@
 package ru.makhotin;
 
-import ru.makhotin.entities.Cell;
-import ru.makhotin.entities.Entity;
-import ru.makhotin.entities.Rock;
+import ru.makhotin.entities.*;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -28,5 +26,20 @@ public class Map {
             setEntity(new Cell(new Random().nextInt(xMax), new Random().nextInt(yMax)),
                     new Rock("Гор"));
         }
+
+        for (int i = 0; i < 3; i++) {
+            setEntity(new Cell(new Random().nextInt(xMax), new Random().nextInt(yMax)),
+                    new Grass("Тра"));
+        }
+        for (int i = 0; i < 3; i++) {
+            setEntity(new Cell(new Random().nextInt(xMax), new Random().nextInt(yMax)),
+                    new Tree("Дер"));
+        }
+    }
+    public boolean isEmptyCell(Cell cell) {
+        return entitys.containsKey(cell);
+    }
+    public String getSpriteCell(Cell cell) {
+        return entitys.get(cell).getPicture();
     }
 }

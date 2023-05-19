@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b23beca-1a06-4f88-a54d-bd60cd33ee30" name="Changes" comment="Start project">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Grass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Rock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Tree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/MapConsoleRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Rock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +44,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
