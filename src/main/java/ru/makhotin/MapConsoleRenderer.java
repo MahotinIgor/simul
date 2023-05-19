@@ -9,12 +9,9 @@ public class MapConsoleRenderer {
                 Cell cell = new Cell(i,j);
                 if (!map.isEmptyCell(cell))
                     System.out.print("... ");
-                else System.out.print(map.getSpriteCell(cell)+" ");
+                else System.out.print(map.getEntity(cell).getPicture()+" ");
             }
             System.out.print("\n");
         }
     }
-
-
-
 }

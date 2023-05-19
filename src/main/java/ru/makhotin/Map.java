@@ -39,7 +39,7 @@ public class Map {
     public boolean isEmptyCell(Cell cell) {
         return entitys.containsKey(cell);
     }
-    public String getSpriteCell(Cell cell) {
-        return entitys.get(cell).getPicture();
+    public Entity getEntity(Cell cell) {
+        return entitys.get(cell);
     }
 }
