@@ -1,11 +1,13 @@
 package ru.makhotin.entities;
 
 abstract public class Creature extends Entity{
-   protected int speed;
+   final int speed;
    protected int  hp;
    abstract void  makeMove(Cell currCell) ;
 
-    public Creature(String picture) {
+    public Creature(String picture, int speed, int hp) {
         super(picture);
+        this.speed = speed;
+        this.hp = hp;
     }
 }
