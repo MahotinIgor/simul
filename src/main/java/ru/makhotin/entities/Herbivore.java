@@ -2,9 +2,9 @@ package ru.makhotin.entities;
 
 public class Herbivore extends Creature{
 
-    public Herbivore(String picture, int speed, int hp) {
+    public Herbivore(int speed, int hp) {
 
-        super(picture, speed, hp);
+        super("Трв", speed, hp);
     }
 
     @Override
