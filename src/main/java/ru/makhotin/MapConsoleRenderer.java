@@ -1,6 +1,7 @@
 package ru.makhotin;
 
 import ru.makhotin.entities.Cell;
+import ru.makhotin.map.Map;
 
 public class MapConsoleRenderer {
     public void render(Map map) {
