@@ -10,8 +10,7 @@ public class App
         MapFactory mapFactory = new MapFactory();
         Map map = mapFactory.generateStartMap(10,10,30);
 
-        MapConsoleRenderer consoleRenderer = new MapConsoleRenderer();
-        consoleRenderer.render(map);
+        map.render();
 
         int a = 123;
     }
