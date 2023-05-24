@@ -11,11 +11,11 @@ public class Cell {
     public Cell shift(CellShift shift) {
         return new Cell(this.x+shift.shiftX, this.y+shift.shiftY);
     }
-    public boolean canShift(CellShift shift) {
+    public boolean canShift(CellShift shift, int xMax, int yMax) {
         int resX = shift.shiftX + this.x;
-        if (resX<0 || resX > 10) return false;
+        if (resX<0 || resX > xMax) return false;
         int resY = shift.shiftY + this.y;
-        if (resY<0 || resY > 10) return false;
+        if (resY<0 || resY > yMax) return false;
         return true;
     }
 

@@ -20,7 +20,7 @@ abstract public class Creature extends Entity{
         Set<Cell> result = new HashSet<>();
 
         for (CellShift shift: getCreatureMoves()) {
-            if (cell.canShift(shift)) {
+            if (cell.canShift(shift, map.xMax, map.yMax)) {
                 Cell newCell = cell.shift(shift);
                 if (isCellAvailableForMove(newCell, map)) {
                     result.add(newCell);
