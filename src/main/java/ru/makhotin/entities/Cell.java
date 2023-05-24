@@ -13,9 +13,9 @@ public class Cell {
     }
     public boolean canShift(CellShift shift, int xMax, int yMax) {
         int resX = shift.shiftX + this.x;
-        if (resX<0 || resX > xMax) return false;
+        if (resX<0 || resX > xMax-1) return false;
         int resY = shift.shiftY + this.y;
-        if (resY<0 || resY > yMax) return false;
+        if (resY<0 || resY > yMax-1) return false;
         return true;
     }
 
