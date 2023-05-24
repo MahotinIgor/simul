@@ -16,7 +16,7 @@ public class MapFactory {
             for (int j = 0; j < yMax; j++) {
                 int numb = new Random().nextInt(factorRandom);
                 if (numb<=5 && numb >0)
-                    map.setEntity(new Cell(i,j), entityFactory.fromRandomNumber(numb));
+                    map.setEntity(new Cell(i,j), entityFactory.fromRandomNumber(numb, map));
             }
         }
         return map;

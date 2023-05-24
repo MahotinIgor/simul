@@ -8,6 +8,16 @@ public class Cell {
         this.x = x;
         this.y = y;
     }
+    public Cell shift(CellShift shift) {
+        return new Cell(this.x+shift.shiftX, this.y+shift.shiftY);
+    }
+    public boolean canShift(CellShift shift) {
+        int resX = shift.shiftX + this.x;
+        if (resX<0 || resX > 10) return false;
+        int resY = shift.shiftY + this.y;
+        if (resY<0 || resY > 10) return false;
+        return true;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -26,4 +36,5 @@ public class Cell {
         result = 31 * result + y;
         return result;
     }
+
 }
