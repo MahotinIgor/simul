@@ -1,5 +1,6 @@
 package ru.makhotin.entities;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import ru.makhotin.map.Map;
@@ -30,7 +31,18 @@ abstract public class Creature extends Entity{
         return result;
     }
 
-    protected abstract Set<CellShift> getCreatureMoves();
+    protected  Set<CellShift> getCreatureMoves() {
+        return new HashSet<>(Arrays.asList(
+                new CellShift( 1, - 1),
+                new CellShift(- 1, 0),
+                new CellShift( - 1,  1),
+                new CellShift(0,  1),
+                new CellShift( 1,  1),
+                new CellShift( 1, 0),
+                new CellShift( 1,  - 1),
+                new CellShift(0,  - 1))
+        );
+    }
 
     private boolean isCellAvailableForMove(Cell newCell, Map map) {
         return !map.isEmptyCell(newCell);

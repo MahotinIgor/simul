@@ -15,8 +15,5 @@ public class Herbivore extends Creature{
 
     }
 
-    @Override
-    protected Set<CellShift> getCreatureMoves() {
-        return null;
-    }
+
 }
