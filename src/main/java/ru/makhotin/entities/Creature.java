@@ -43,6 +43,19 @@ abstract public class Creature extends Entity{
                 new CellShift(0,  - 1))
         );
     }
+    public Cell isEatNear(Cell cell, Class<?> eat) {
+        Set<Cell> cellSet = new HashSet<>();
+        cellSet = getAvalibleMoveCells();
+        for (CellShift shift: getCreatureMoves()) {
+            if (cell.canShift(shift, map.xMax, map.yMax)) {
+                Cell newCell = cell.shift(shift);
+                if (!isCellAvailableForMove(newCell, map) && map.getEntity(newCell).getClass() == eat) {
+                    return newCell;
+                }
+            }
+        }
+        return null;
+    }
 
     private boolean isCellAvailableForMove(Cell newCell, Map map) {
         return !map.isEmptyCell(newCell);
