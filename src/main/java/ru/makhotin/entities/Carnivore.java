@@ -1,9 +1,6 @@
 package ru.makhotin.entities;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import ru.makhotin.map.Map;
-import java.util.Set;
 
 public class Carnivore extends Creature{
     private int attak;
@@ -13,7 +10,7 @@ public class Carnivore extends Creature{
     }
 
     @Override
-    void makeMove(Cell currCell) {
+    public void makeMove(Cell currCell) {
 
     }
 

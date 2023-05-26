@@ -3,7 +3,8 @@ package ru.makhotin.map;
 import ru.makhotin.entities.*;
 
 import java.util.HashMap;
-import java.util.Random;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Map {
 
@@ -14,10 +15,7 @@ public class Map {
         this.xMax = xMax;
         this.yMax = yMax;
     }
-
     HashMap<Cell, Entity> entitys = new HashMap<>();
-
-
 
     public void setEntity(Cell cell, Entity entity) {
         entity.cell = cell;
@@ -40,4 +38,20 @@ public class Map {
             System.out.print("\n");
         }
     }
+    public void delete(Cell cell) {
+        entitys.remove(cell);
+
+    }
+
+    public Set<Creature> getCreaturesFromMap() {
+        Set<Creature> creatureSet = new HashSet<>();
+        for(Entity entity:entitys.values()) {
+            if(entity.getClass().getSimpleName().equals("Herbivore") )//||
+                    //entity.getClass().getSimpleName().equals("Carnivore") )
+                creatureSet.add((Creature) entity);
+        }
+        System.out.println(creatureSet.size());
+        return creatureSet;
+    }
+
 }

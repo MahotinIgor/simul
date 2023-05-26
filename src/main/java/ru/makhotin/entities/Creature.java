@@ -7,9 +7,9 @@ import ru.makhotin.map.Map;
 
 abstract public class Creature extends Entity{
    final int speed;
-   private Map map;
+   protected Map map;
    protected int  hp;
-   abstract void  makeMove(Cell currCell) ;
+   public abstract void  makeMove(Cell currCell) ;
 
     public Creature(String picture, int speed, int hp, Map map) {
         super(picture);
@@ -44,8 +44,8 @@ abstract public class Creature extends Entity{
         );
     }
     public Cell isEatNear(Cell cell, Class<?> eat) {
-        Set<Cell> cellSet = new HashSet<>();
-        cellSet = getAvalibleMoveCells();
+//        Set<Cell> cellSet = new HashSet<>();
+//        cellSet = getAvalibleMoveCells();
         for (CellShift shift: getCreatureMoves()) {
             if (cell.canShift(shift, map.xMax, map.yMax)) {
                 Cell newCell = cell.shift(shift);

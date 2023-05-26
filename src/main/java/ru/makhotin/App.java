@@ -24,6 +24,14 @@ public class App
         Set<Cell> avCell1 = creature1.getAvalibleMoveCells();
 
 
+
+        //creature1.makeMove(creature1.cell);
+       // System.out.println(map.getCreaturesFromMap());
+        for(Creature trv: map.getCreaturesFromMap())
+            trv.makeMove(trv.cell);
+
+
+
         int a = 123;
     }
 }
