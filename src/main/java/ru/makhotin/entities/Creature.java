@@ -39,7 +39,7 @@ abstract public class Creature extends Entity{
                 new CellShift(0,  1),
                 new CellShift( 1,  1),
                 new CellShift( 1, 0),
-                new CellShift( 1,  - 1),
+                new CellShift( -1,  - 1),
                 new CellShift(0,  - 1))
         );
     }

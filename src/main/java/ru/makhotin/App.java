@@ -16,10 +16,11 @@ public class App
         map.setEntity(new Cell(9,9), new Herbivore(10,10, map));
         Creature creature = (Creature) map.getEntity(new Cell(0,0));
         Set<Cell> avCell = creature.getAvalibleMoveCells();
+        map.render();
 
         Creature creature1 = (Creature) map.getEntity(new Cell(9,9));
         Set<Cell> avCell1 = creature1.getAvalibleMoveCells();
-        map.render();
+
 
         int a = 123;
     }

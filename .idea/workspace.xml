@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b23beca-1a06-4f88-a54d-bd60cd33ee30" name="Changes" comment="Fix: delete abstract method getAvalibleMoveCells() from Creature">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Creature.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,15 +200,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fix: delete abstract method getAvalibleMoveCells() from Creature" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/makhotin/App.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="avCell.toArray()[0]" />
