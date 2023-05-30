@@ -1,14 +1,15 @@
 package ru.makhotin.entities;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
+
 import ru.makhotin.map.Map;
 
 abstract public class Creature extends Entity{
    final int speed;
    protected Map map;
    protected int  hp;
+    Deque<Cell> currentPath;
    public abstract void  makeMove(Cell currCell) ;
 
     public Creature(String picture, int speed, int hp, Map map) {
@@ -17,7 +18,7 @@ abstract public class Creature extends Entity{
         this.hp = hp;
         this.map = map;
     }
-    public Set<Cell> getAvalibleMoveCells() {
+    public Set<Cell> getAvalibleMoveCells(Cell cell) {
         Set<Cell> result = new HashSet<>();
 
         for (CellShift shift: getCreatureMoves()) {
@@ -55,6 +56,25 @@ abstract public class Creature extends Entity{
             }
         }
         return null;
+    }
+    public Deque<Cell> findPathToEat(Cell cell, Class<?> eat) {
+        Deque<Cell> path = new ArrayDeque<>();
+
+        Deque<Cell> toVisit = new ArrayDeque<>();
+        toVisit.addAll(getAvalibleMoveCells(cell));
+        System.out.println(toVisit);
+
+        while (!toVisit.isEmpty()) {
+            System.out.println("to visit="+toVisit);
+            Cell visiting = toVisit.pollFirst();
+            path.add(visiting);
+            System.out.println("path="+path);
+
+            if (isEatNear(visiting,eat) != null) break;
+            toVisit.addAll(getAvalibleMoveCells(visiting).stream().filter(c -> !path.contains(c)).collect(Collectors.toList()));
+        }
+
+        return path;
     }
 
     private boolean isCellAvailableForMove(Cell newCell, Map map) {

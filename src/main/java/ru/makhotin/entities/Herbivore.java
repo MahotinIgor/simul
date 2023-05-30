@@ -24,6 +24,8 @@ public class Herbivore extends Creature{
                 System.out.println();
             }
 
+
+
                // break;
             //}
     }
