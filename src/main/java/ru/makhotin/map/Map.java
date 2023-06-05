@@ -40,7 +40,13 @@ public class Map {
     }
     public void delete(Cell cell) {
         entitys.remove(cell);
-
+    }
+    public void move(Cell start, Cell end) {
+        //if (!this.isEmptyCell(start) && this.isEmptyCell(end)){
+            System.out.println(" start move");
+            this.setEntity(end, this.getEntity(start));
+            this.delete(start);
+        //}
     }
 
     public Set<Creature> getCreaturesFromMap() {
@@ -53,5 +59,4 @@ public class Map {
         System.out.println(creatureSet.size());
         return creatureSet;
     }
-
 }

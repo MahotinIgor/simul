@@ -19,10 +19,14 @@ public class App
         Creature creature = (Creature) map.getEntity(new Cell(0,0));
         Set<Cell> avCell = creature.getAvalibleMoveCells(creature.cell);
         map.render();
+        System.out.println("");
 
         Creature creature1 = (Creature) map.getEntity(new Cell(9,9));
         Cell eatCell = creature1.isEatNear(new Cell(9,9), Grass.class);
         Set<Cell> avCell1 = creature1.getAvalibleMoveCells(creature1.cell);
+
+        map.move(new Cell(9,9),new Cell(8,8)) ;
+        map.render();
 
 
         Deque<Cell> pathF;

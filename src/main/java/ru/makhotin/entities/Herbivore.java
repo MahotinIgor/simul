@@ -23,9 +23,6 @@ public class Herbivore extends Creature{
                 this.map.render();
                 System.out.println();
             }
-
-
-
                // break;
             //}
     }

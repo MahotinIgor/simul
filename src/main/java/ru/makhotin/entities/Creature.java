@@ -62,13 +62,13 @@ abstract public class Creature extends Entity{
 
         Deque<Cell> toVisit = new ArrayDeque<>();
         toVisit.addAll(getAvalibleMoveCells(cell));
-        System.out.println(toVisit);
+        //System.out.println(toVisit);
 
         while (!toVisit.isEmpty()) {
-            System.out.println("to visit="+toVisit);
+           // System.out.println("to visit="+toVisit);
             Cell visiting = toVisit.pollFirst();
             path.add(visiting);
-            System.out.println("path="+path);
+            //System.out.println("path="+path);
 
             if (isEatNear(visiting,eat) != null) break;
             toVisit.addAll(getAvalibleMoveCells(visiting).stream().filter(c -> !path.contains(c)).collect(Collectors.toList()));
