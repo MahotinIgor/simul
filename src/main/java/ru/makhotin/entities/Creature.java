@@ -10,7 +10,9 @@ abstract public class Creature extends Entity{
    protected Map map;
    protected int  hp;
     Deque<Cell> currentPath;
-   public abstract void  makeMove(Cell currCell) ;
+
+
+    public abstract void  makeMove() ;
 
     public Creature(String picture, int speed, int hp, Map map) {
         super(picture);
@@ -71,13 +73,20 @@ abstract public class Creature extends Entity{
             //System.out.println("path="+path);
 
             if (isEatNear(visiting,eat) != null) break;
-            toVisit.addAll(getAvalibleMoveCells(visiting).stream().filter(c -> !path.contains(c)).collect(Collectors.toList()));
+            for(Cell cellP : getAvalibleMoveCells(visiting)) {
+                if(isCellAvailableForMove(cellP, map) && !toVisit.contains(cellP)) {
+                    toVisit.add(cellP);
+
+                }
+
+            }
+           // toVisit.addAll(getAvalibleMoveCells(visiting).stream().filter(c -> !path.contains(c)).collect(Collectors.toList()));
         }
 
         return path;
     }
 
     private boolean isCellAvailableForMove(Cell newCell, Map map) {
-        return !map.isEmptyCell(newCell);
+        return map.isEmptyCell(newCell);
     }
     }

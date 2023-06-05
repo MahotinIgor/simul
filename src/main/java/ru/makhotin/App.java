@@ -14,7 +14,7 @@ public class App
         MapFactory mapFactory = new MapFactory();
         Map map = mapFactory.generateStartMap(10,10,30);
         map.setEntity(new Cell(0,0), new Carnivore(10,10,10, map));
-        map.setEntity(new Cell(9,9), new Herbivore(10,10, map));
+        map.setEntity(new Cell(9,9), new Herbivore(100,10, map));
         //map.setEntity(new Cell(9,8), new Grass());
         Creature creature = (Creature) map.getEntity(new Cell(0,0));
         Set<Cell> avCell = creature.getAvalibleMoveCells(creature.cell);
@@ -22,27 +22,15 @@ public class App
         System.out.println("");
 
         Creature creature1 = (Creature) map.getEntity(new Cell(9,9));
-        Cell eatCell = creature1.isEatNear(new Cell(9,9), Grass.class);
-        Set<Cell> avCell1 = creature1.getAvalibleMoveCells(creature1.cell);
-
-        map.move(new Cell(9,9),new Cell(8,8)) ;
-        map.render();
-
-
-        Deque<Cell> pathF;
-
-        pathF = creature1.findPathToEat(new Cell(9,9), Grass.class);
+        //Cell eatCell = creature1.isEatNear(new Cell(9,9), Grass.class);
+        //Set<Cell> avCell1 = creature1.getAvalibleMoveCells(creature1.cell);
+        creature1.makeMove();
+        Deque path1 = creature1.findPathToEat(creature1.cell, Grass.class);
         int b=123;
 
-
-
-        //creature1.makeMove(creature1.cell);
        // System.out.println(map.getCreaturesFromMap());
         //for(Creature trv: map.getCreaturesFromMap())
           //  trv.makeMove(trv.cell);
-
-
-
         int a = 123;
     }
 }

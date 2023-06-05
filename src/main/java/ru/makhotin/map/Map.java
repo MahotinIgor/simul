@@ -22,7 +22,7 @@ public class Map {
         entitys.put(cell, entity);
     }
     public boolean isEmptyCell(Cell cell) {
-        return entitys.containsKey(cell);
+        return !entitys.containsKey(cell);
     }
     public Entity getEntity(Cell cell) {
         return entitys.get(cell);
@@ -31,7 +31,7 @@ public class Map {
         for (int i = 0; i <this.xMax; i++) {
             for (int j = 0; j < this.yMax; j++) {
                 Cell cell = new Cell(i,j);
-                if (!this.isEmptyCell(cell))
+                if (this.isEmptyCell(cell))
                     System.out.print("... ");
                 else System.out.print(this.getEntity(cell).getPicture()+" ");
             }
@@ -42,11 +42,11 @@ public class Map {
         entitys.remove(cell);
     }
     public void move(Cell start, Cell end) {
-        //if (!this.isEmptyCell(start) && this.isEmptyCell(end)){
+        if (!this.isEmptyCell(start) && this.isEmptyCell(end)){
             System.out.println(" start move");
             this.setEntity(end, this.getEntity(start));
             this.delete(start);
-        //}
+        }
     }
 
     public Set<Creature> getCreaturesFromMap() {

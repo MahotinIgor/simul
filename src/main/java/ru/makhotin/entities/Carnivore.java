@@ -10,7 +10,7 @@ public class Carnivore extends Creature{
     }
 
     @Override
-    public void makeMove(Cell currCell) {
+    public void makeMove() {
 
     }
 
