@@ -32,7 +32,7 @@ public class Map {
             for (int j = 0; j < this.yMax; j++) {
                 Cell cell = new Cell(i,j);
                 if (this.isEmptyCell(cell))
-                    System.out.print("... ");
+                    System.out.print("."+i+"."+j+" ");
                 else System.out.print(this.getEntity(cell).getPicture()+" ");
             }
             System.out.print("\n");
@@ -43,7 +43,8 @@ public class Map {
     }
     public void move(Cell start, Cell end) {
         if (!this.isEmptyCell(start) && this.isEmptyCell(end)){
-            System.out.println(" start move");
+            System.out.println(" start move " + start.x + " "+start.y+" to " + end.x
+                    + " " +end.y );
             this.setEntity(end, this.getEntity(start));
             this.delete(start);
         }

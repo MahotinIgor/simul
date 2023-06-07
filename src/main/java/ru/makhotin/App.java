@@ -14,7 +14,7 @@ public class App
         MapFactory mapFactory = new MapFactory();
         Map map = mapFactory.generateStartMap(10,10,30);
         map.setEntity(new Cell(0,0), new Carnivore(10,10,10, map));
-        map.setEntity(new Cell(9,9), new Herbivore(100,10, map));
+        map.setEntity(new Cell(9,9), new Herbivore(10,10, map));
         //map.setEntity(new Cell(9,8), new Grass());
         Creature creature = (Creature) map.getEntity(new Cell(0,0));
         Set<Cell> avCell = creature.getAvalibleMoveCells(creature.cell);

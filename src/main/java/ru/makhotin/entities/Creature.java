@@ -10,7 +10,7 @@ abstract public class Creature extends Entity{
    protected Map map;
    protected int  hp;
     Deque<Cell> currentPath;
-
+    Set<Cell> visited = new HashSet<>();
 
     public abstract void  makeMove() ;
 
@@ -61,8 +61,8 @@ abstract public class Creature extends Entity{
     }
     public Deque<Cell> findPathToEat(Cell cell, Class<?> eat) {
         Deque<Cell> path = new ArrayDeque<>();
-
         Deque<Cell> toVisit = new ArrayDeque<>();
+
         toVisit.addAll(getAvalibleMoveCells(cell));
         //System.out.println(toVisit);
 
@@ -74,11 +74,9 @@ abstract public class Creature extends Entity{
 
             if (isEatNear(visiting,eat) != null) break;
             for(Cell cellP : getAvalibleMoveCells(visiting)) {
-                if(isCellAvailableForMove(cellP, map) && !toVisit.contains(cellP)) {
+                if(isCellAvailableForMove(cellP, map) && !path.contains(cellP)) {
                     toVisit.add(cellP);
-
                 }
-
             }
            // toVisit.addAll(getAvalibleMoveCells(visiting).stream().filter(c -> !path.contains(c)).collect(Collectors.toList()));
         }

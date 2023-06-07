@@ -13,6 +13,7 @@ public class Herbivore extends Creature{
 
     @Override
     public void makeMove() {
+
         for (int step = 0; step < this.speed; step++) {
 
             //check if there is grass nearby;
@@ -26,13 +27,17 @@ public class Herbivore extends Creature{
                 System.out.println();
                  break;
             }
-            currentPath = this.findPathToEat(this.cell, Grass.class);
-            if (currentPath.size()==0) break;
-            else {
-                Cell cellHod = currentPath.pollFirst();
-                map.move(this.cell, cellHod);
-                map.render();
+            Cell cellStep = this.findPathToEat(this.cell, Grass.class).pollFirst();
+
+            if (cellStep==null) {
+                currentPath.addAll(this.findPathToEat(this.cell, Grass.class));
+                cellStep = this.currentPath.pollFirst();
             }
+
+            map.move(this.cell, cellStep);
+            map.render();
+            this.cell = cellStep;
+
         }
     }
 }
