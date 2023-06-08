@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b23beca-1a06-4f88-a54d-bd60cd33ee30" name="Changes" comment="Fix: findPathToEat is working! Herbivore.move is working!">
+    <list default="true" id="4b23beca-1a06-4f88-a54d-bd60cd33ee30" name="Changes" comment="Add: Carnivore.move()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Carnivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Carnivore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Creature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/map/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/map/Map.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686212846754</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add: Carnivore.move()">
+      <created>1686214681773</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1686214681773</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,7 +224,8 @@
     <MESSAGE value="Add: MakeMove for Herbivore" />
     <MESSAGE value="Fix: MakeMove for Herbivore" />
     <MESSAGE value="Fix: findPathToEat is working! Herbivore.move is working!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: findPathToEat is working! Herbivore.move is working!" />
+    <MESSAGE value="Add: Carnivore.move()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: Carnivore.move()" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pet1$App.ic" NAME="App Coverage Results" MODIFIED="1685345665804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

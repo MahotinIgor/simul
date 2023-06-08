@@ -53,8 +53,7 @@ public class Map {
     public Set<Creature> getCreaturesFromMap() {
         Set<Creature> creatureSet = new HashSet<>();
         for(Entity entity:entitys.values()) {
-            if(entity.getClass().getSimpleName().equals("Herbivore") )//||
-                    //entity.getClass().getSimpleName().equals("Carnivore") )
+            if (( entity.getClass().getSimpleName().equals("Herbivore") || entity.getClass().getSimpleName().equals("Carnivore")))
                 creatureSet.add((Creature) entity);
         }
         System.out.println(creatureSet.size());

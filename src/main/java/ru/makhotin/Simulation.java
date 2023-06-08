@@ -10,6 +10,5 @@ public class Simulation {
 
     public void nextTurn() {
 
-
     }
 }

@@ -25,10 +25,10 @@ public class Carnivore extends Creature{
                     map.delete(eatOnCell);
                     //rerender
                     map.move(this.cell, eatOnCell);
+                    this.cell = eatOnCell;
                     this.map.render();
                     System.out.println();
                 }
-
                 break;
             }
 
