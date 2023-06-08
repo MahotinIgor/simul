@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b23beca-1a06-4f88-a54d-bd60cd33ee30" name="Changes" comment="Fix: MakeMove for Herbivore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Creature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Herbivore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/map/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/map/Map.java" afterDir="false" />
@@ -219,11 +217,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/makhotin/App.java</url>
           <line>28</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/makhotin/App.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

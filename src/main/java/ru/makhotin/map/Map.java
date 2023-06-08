@@ -32,7 +32,7 @@ public class Map {
             for (int j = 0; j < this.yMax; j++) {
                 Cell cell = new Cell(i,j);
                 if (this.isEmptyCell(cell))
-                    System.out.print("."+i+"."+j+" ");
+                    System.out.print(i+"."+j+" ");
                 else System.out.print(this.getEntity(cell).getPicture()+" ");
             }
             System.out.print("\n");

@@ -20,7 +20,7 @@ public class Herbivore extends Creature{
             var grassOnCell =this.isEatNear(this.cell, Grass.class) ;
 
             if (grassOnCell != null) {
-                System.out.println("Herbivore found grass on cell x: " + (grassOnCell.x+1) + " y:" + (grassOnCell.y +1)+ " and ate it. Yum!");
+                System.out.println("Herbivore found grass on cell x: " + (grassOnCell.x) + " y:" + (grassOnCell.y)+ " and ate it. Yum!");
                 map.delete(grassOnCell);
                 //rerender
                 this.map.render();
