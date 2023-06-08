@@ -9,8 +9,7 @@ abstract public class Creature extends Entity {
     final int speed;
     protected Map map;
     protected int hp;
-    Deque<Cell> currentPath;
-    boolean visited[] ;
+    Deque<Cell> currentPath = new ArrayDeque<>();
 
     public abstract void makeMove();
 
@@ -19,7 +18,6 @@ abstract public class Creature extends Entity {
         this.speed = speed;
         this.hp = hp;
         this.map = map;
-        this.visited = new boolean[(map.xMax) * (map.yMax)];
 
     }
 
@@ -68,25 +66,20 @@ abstract public class Creature extends Entity {
         Deque<Cell> toVisit = new ArrayDeque<>();
 
         toVisit.addAll(getAvalibleMoveCells(cell));
-        //System.out.println(toVisit);
-        visited[cell.x * (map.xMax) + cell.y-1] = true;
 
         while (!toVisit.isEmpty()) {
-            // System.out.println("to visit="+toVisit);
+
             Cell visiting = toVisit.pollFirst();
-            if(!isCellVisited(visiting)) {
-                path.add(visiting);
-                visited[map.xMax* (visiting.x) + visiting.y-1] = true;
-            }
-            //System.out.println("path="+path);
+            path.add(visiting);
 
             if (isEatNear(visiting, eat) != null) break;
+
             for (Cell cellP : getAvalibleMoveCells(visiting)) {
-                if (isCellAvailableForMove(cellP, map) && !isCellVisited(cellP)) {
+                if (isCellAvailableForMove(cellP, map) && !path.contains(cellP)) {
                     toVisit.add(cellP);
                 }
             }
-            // toVisit.addAll(getAvalibleMoveCells(visiting).stream().filter(c -> !path.contains(c)).collect(Collectors.toList()));
+             //toVisit.addAll(getAvalibleMoveCells(visiting).stream().filter(c -> !path.contains(c)).collect(Collectors.toList()));
         }
 
         return path;
@@ -96,8 +89,5 @@ abstract public class Creature extends Entity {
         return map.isEmptyCell(newCell);
     }
 
-    private boolean isCellVisited(Cell cell) {
-        return visited[cell.x * (map.xMax) + cell.y-1];
 
-    }
 }

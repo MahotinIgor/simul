@@ -17,7 +17,7 @@ public class Herbivore extends Creature{
         for (int step = 0; step < this.speed; step++) {
 
             //check if there is grass nearby;
-            var grassOnCell =this.isEatNear(this.cell, Grass.class) ;
+            var grassOnCell = isEatNear(this.cell, Grass.class) ;
 
             if (grassOnCell != null) {
                 System.out.println("Herbivore found grass on cell x: " + (grassOnCell.x) + " y:" + (grassOnCell.y)+ " and ate it. Yum!");
@@ -27,16 +27,16 @@ public class Herbivore extends Creature{
                 System.out.println();
                  break;
             }
-            Cell cellStep = this.findPathToEat(this.cell, Grass.class).pollFirst();
 
-            if (cellStep==null) {
-                currentPath.addAll(this.findPathToEat(this.cell, Grass.class));
-                cellStep = this.currentPath.pollFirst();
+            if(this.currentPath.size() == 0) {
+                this.currentPath = findPathToEat(this.cell, Grass.class);
             }
-
-            map.move(this.cell, cellStep);
-            map.render();
-            this.cell = cellStep;
+             else {
+                Cell cellStep = this.currentPath.pollFirst();
+                map.move(this.cell, cellStep);
+                map.render();
+                this.cell = cellStep;
+            }
 
         }
     }

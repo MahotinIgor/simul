@@ -12,7 +12,7 @@ public class App
     public static void main( String[] args )
     {
         MapFactory mapFactory = new MapFactory();
-        Map map = mapFactory.generateStartMap(10,10,30);
+        Map map = mapFactory.generateStartMap(10,10,20);
         map.setEntity(new Cell(0,0), new Carnivore(10,10,10, map));
         map.setEntity(new Cell(9,9), new Herbivore(10,10, map));
         //map.setEntity(new Cell(9,8), new Grass());
@@ -24,9 +24,14 @@ public class App
         Creature creature1 = (Creature) map.getEntity(new Cell(9,9));
         //Cell eatCell = creature1.isEatNear(new Cell(9,9), Grass.class);
         //Set<Cell> avCell1 = creature1.getAvalibleMoveCells(creature1.cell);
-        creature1.makeMove();
-        Deque path1 = creature1.findPathToEat(creature1.cell, Grass.class);
+       // Deque path1 = creature1.findPathToEat(creature1.cell, Grass.class);
+
+
         int b=123;
+        creature1.makeMove();
+
+
+
 
        // System.out.println(map.getCreaturesFromMap());
         //for(Creature trv: map.getCreaturesFromMap())

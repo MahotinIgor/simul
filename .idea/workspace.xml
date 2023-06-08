@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b23beca-1a06-4f88-a54d-bd60cd33ee30" name="Changes" comment="Fix: MakeMove for Herbivore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Creature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/entities/Herbivore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/makhotin/map/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/makhotin/map/Map.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,17 +209,6 @@
     <MESSAGE value="Add: MakeMove for Herbivore" />
     <MESSAGE value="Fix: MakeMove for Herbivore" />
     <option name="LAST_COMMIT_MESSAGE" value="Fix: MakeMove for Herbivore" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/makhotin/App.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pet1$App.ic" NAME="App Coverage Results" MODIFIED="1685345665804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
