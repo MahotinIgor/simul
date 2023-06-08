@@ -71,9 +71,7 @@ abstract public class Creature extends Entity {
 
             Cell visiting = toVisit.pollFirst();
             path.add(visiting);
-
             if (isEatNear(visiting, eat) != null) break;
-
             for (Cell cellP : getAvalibleMoveCells(visiting)) {
                 if (isCellAvailableForMove(cellP, map) && !path.contains(cellP)) {
                     toVisit.add(cellP);

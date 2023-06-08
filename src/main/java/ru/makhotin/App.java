@@ -22,13 +22,14 @@ public class App
         System.out.println("");
 
         Creature creature1 = (Creature) map.getEntity(new Cell(9,9));
+        Creature creature2 = (Creature) map.getEntity(new Cell(0,0));
         //Cell eatCell = creature1.isEatNear(new Cell(9,9), Grass.class);
         //Set<Cell> avCell1 = creature1.getAvalibleMoveCells(creature1.cell);
        // Deque path1 = creature1.findPathToEat(creature1.cell, Grass.class);
 
 
         int b=123;
-        creature1.makeMove();
+        creature2.makeMove();
 
 
 
